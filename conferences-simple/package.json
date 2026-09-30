@@ -1,0 +1,15 @@
+{
+  "name": "conferences-simple",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Конференции.РФ: бронирование помещений для конференций (учебный проект)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.24.4"
+  }
+}

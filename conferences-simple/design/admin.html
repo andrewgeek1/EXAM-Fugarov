@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Макет 390×844: Администратор</title>
+  <link rel="stylesheet" href="../public/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<!-- Мобильный макет панели администратора: фильтр и карточка новой заявки -->
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="admin.html"><img src="../public/img/logo.jpg" alt="" width="30" height="30">Конференции<span>.РФ</span></a>
+      <nav class="nav">
+        <span>Администратор</span>
+        <a href="login.html">Выйти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1>Все заявки</h1>
+    <div class="filter">
+      <select class="form-select">
+        <option>Все статусы</option>
+      </select>
+      <input class="form-control" placeholder="Поиск по ФИО или логину">
+    </div>
+    <p class="count">Найдено заявок: 4</p>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <article class="card-app">
+          <img src="../public/img/auditorium.png" alt="" width="400" height="250">
+          <div class="card-app-body">
+            <p class="number">Заявка 4</p>
+            <h2>Аудитория «Лекторий»</h2>
+            <p>Дата начала: 12.11.2026</p>
+            <p>Оплата: очно</p>
+            <p class="person">Петров Игорь Николаевич<br>petrov2026, 8(903)111-22-33<br>petrov@yandex.ru</p>
+            <span class="status status-new">Новая</span>
+            <div class="actions">
+              <button class="btn-main" type="button">Мероприятие назначено</button>
+              <button class="btn-line" type="button">Завершено</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

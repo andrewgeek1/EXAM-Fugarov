@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход | Конференции.РФ</title>
+  <link rel="icon" href="/img/logo.jpg">
+
+  <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="/login"><img src="/img/logo.jpg" alt="" width="30" height="30">Конференции<span>.РФ</span></a>
+    </div>
+  </header>
+
+
+  <main class="container page page-narrow">
+    <h1>Вход</h1>
+    <p class="lead">Бронирование залов для всероссийских конференций</p>
+    <p id="message" class="message"></p>
+
+    <form id="login-form" novalidate>
+      <div class="field">
+        <label for="login">Логин</label>
+        <input class="form-control" id="login" name="login" autocomplete="username">
+        <div class="error error-login"></div>
+      </div>
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input class="form-control" id="password" name="password" type="password" autocomplete="current-password">
+        <div class="error error-password"></div>
+      </div>
+      <button class="btn-main" type="submit">Войти</button>
+    </form>
+
+    <p class="switch"><a href="/register">Еще не зарегистрированы? Регистрация</a></p>
+  </main>
+
+
+  <script src="/js/common.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

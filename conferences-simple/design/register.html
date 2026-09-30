@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Макет 390×844: Регистрация</title>
+  <link rel="stylesheet" href="../public/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="login.html"><img src="../public/img/logo.jpg" alt="" width="30" height="30">Конференции<span>.РФ</span></a>
+    </div>
+  </header>
+
+  <main class="container page page-narrow">
+    <h1>Регистрация</h1>
+    <p class="lead">Все поля обязательны</p>
+    <form novalidate>
+      <div class="field">
+        <label for="login">Логин</label>
+        <input class="form-control is-invalid" id="login" value="ivanova2026">
+        <div class="error">Такой логин уже занят</div>
+      </div>
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input class="form-control" id="password" type="password" value="qwerty2027">
+      </div>
+      <div class="field">
+        <label for="fio">ФИО</label>
+        <input class="form-control" id="fio" value="Иванова Анна Сергеевна">
+      </div>
+      <div class="field">
+        <label for="phone">Телефон</label>
+        <input class="form-control" id="phone" value="8(912)345-67-89">
+      </div>
+      <div class="field">
+        <label for="email">Электронная почта</label>
+        <input class="form-control" id="email" value="ivanova@mail.ru">
+      </div>
+      <button class="btn-main" type="button">Зарегистрироваться</button>
+    </form>
+    <p class="switch"><a href="login.html">Уже зарегистрированы? Войти</a></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,372 @@
+
+
+/* Шрифт Onest */
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest-cyrillic.woff2') format('woff2');
+  font-weight: 100 900;
+  unicode-range: U+0400-045F, U+2116;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+
+
+:root {
+  --ink: #111111;
+  --paper: #FFFFFF;
+  --gray: #F2F2EF;     
+  --red: #E0301E;
+  --muted: rgba(17, 17, 17, 0.6);
+  --line: rgba(17, 17, 17, 0.12);
+  --ease: cubic-bezier(.22, 1, .36, 1);   
+}
+
+
+
+
+
+
+body {
+  font-family: 'Onest', Arial, sans-serif;
+  font-size: 17px;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 1.6rem + 3vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  margin-bottom: 12px;
+}
+
+.lead {
+  font-size: 17px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.page {
+  padding-top: 40px;
+  padding-bottom: 64px;
+}
+
+.page-narrow {
+  max-width: 480px;
+}
+
+a {
+  color: var(--ink);
+}
+
+
+
+
+
+
+
+.header {
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.logo span {
+  color: var(--red);
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--ink);
+}
+
+
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-control,
+.form-select {
+  font-size: 17px;
+  padding: 12px 14px;
+  background-color: var(--gray);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--paper);
+  border-color: var(--ink);
+  box-shadow: none;
+}
+
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: var(--red);
+  background-image: none;
+  animation: shake 0.4s;
+}
+
+.error {
+  color: var(--red);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.message:empty {
+  display: none;
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--gray);
+}
+
+.message-error {
+  color: var(--red);
+}
+
+.switch {
+  margin-top: 24px;
+}
+
+
+
+
+
+
+.btn-main,
+.btn-line {
+  display: inline-block;
+  padding: 13px 26px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.6s var(--ease), box-shadow 0.5s var(--ease), background-color 0.3s;
+}
+
+.btn-main {
+  color: var(--paper);
+  background: var(--ink);
+  border: 0;
+}
+
+.btn-line {
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+}
+
+/* анимация */
+.btn-main:hover,
+.btn-line:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(17, 17, 17, 0.18);
+}
+
+.btn-main:active,
+.btn-line:active {
+  transform: translateY(0) scale(0.98);
+}
+
+
+
+.card-app {
+  height: 100%;
+  overflow: hidden;
+  background: var(--gray);
+  border-radius: 14px;
+  animation: appear 0.9s var(--ease) both;   
+}
+
+.card-app img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-app-body {
+  padding: 18px 20px 22px;
+}
+
+.card-app h2 {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.card-app p {
+  margin-bottom: 4px;
+}
+
+.number,
+.hint,
+.person {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.person {
+  margin-top: 10px;
+}
+
+.review {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.review-form {
+  margin-top: 16px;
+}
+
+.review-form .form-control,
+.review-form .form-select {
+  background-color: var(--paper);
+  margin-top: 8px;
+}
+
+.review-form .btn-main {
+  margin-top: 12px;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.status-new {
+  color: var(--red);
+}
+
+.status-assigned {
+  color: var(--ink);
+}
+
+.status-done {
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+
+.actions .btn-main,
+.actions .btn-line {
+  padding: 10px 18px;
+  font-size: 15px;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter .form-select,
+.filter .form-control {
+  flex: 1 1 240px;
+}
+
+.count,
+.empty {
+  color: var(--muted);
+  margin: 16px 0;
+}
+
+
+
+
+/* Анимации */
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(24px); filter: blur(8px); }
+  to   { opacity: 1; transform: none; filter: blur(0); }
+}
+
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-6px); }
+  75%      { transform: translateX(6px); }
+}
+
+
+.page h1,
+.page .lead,
+.page form {
+  animation: appear 0.9s var(--ease) both;
+}
+
+.page .lead { animation-delay: 0.1s; }
+.page form  { animation-delay: 0.2s; }
+
+/* Карточки появляются по очереди */
+.col-md-6:nth-child(2) .card-app { animation-delay: 0.1s; }
+.col-md-6:nth-child(3) .card-app { animation-delay: 0.2s; }
+.col-md-6:nth-child(4) .card-app { animation-delay: 0.3s; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

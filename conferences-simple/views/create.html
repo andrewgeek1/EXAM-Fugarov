@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новая заявка | Конференции.РФ</title>
+  <link rel="icon" href="/img/logo.jpg">
+
+  <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="/cabinet"><img src="/img/logo.jpg" alt="" width="30" height="30">Конференции<span>.РФ</span></a>
+      <nav class="nav">
+        <a href="/cabinet">Мои заявки</a>
+        <a href="/logout">Выйти</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="container page page-narrow">
+    <h1>Новая заявка</h1>
+    <p class="lead">Выберите зал, дату и способ оплаты</p>
+
+    <form id="create-form" novalidate>
+      <div class="field">
+        <label for="room_id">Помещение</label>
+
+        <select class="form-select" id="room_id" name="room_id">
+          <option value="">Выберите помещение</option>
+        </select>
+        <div class="error error-room_id"></div>
+      </div>
+      <div class="field">
+        <label for="event_date">Дата начала конференции</label>
+        <input class="form-control" id="event_date" name="event_date" type="date">
+        <div class="error error-event_date"></div>
+      </div>
+      <div class="field">
+        <label for="payment_method">Способ оплаты</label>
+        <select class="form-select" id="payment_method" name="payment_method">
+          <option value="">Выберите способ оплаты</option>
+          <option value="очно">Очно, при посещении</option>
+          <option value="СБП">Переводом по СБП</option>
+        </select>
+        <div class="error error-payment_method"></div>
+      </div>
+      <button class="btn-main" type="submit">Отправить</button>
+    </form>
+  </main>
+
+
+  <script src="/js/common.js"></script>
+  <script src="/js/create.js"></script>
+</body>
+</html>

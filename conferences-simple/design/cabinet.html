@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Макет 390×844: Мои заявки</title>
+  <link rel="stylesheet" href="../public/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="cabinet.html"><img src="../public/img/logo.jpg" alt="" width="30" height="30">Конференции<span>.РФ</span></a>
+      <nav class="nav">
+        <a href="create.html">Новая заявка</a>
+        <a href="login.html">Выйти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1>Мои заявки</h1>
+    <p class="lead">Статус каждой заявки. Отзыв можно оставить после мероприятия</p>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <article class="card-app">
+          <img src="../public/img/cinema.jpg" alt="" width="400" height="250">
+          <div class="card-app-body">
+            <h2>Кинозал «Премьер»</h2>
+            <p>Дата начала: 20.10.2026</p>
+            <p>Оплата: СБП</p>
+            <span class="status status-assigned">Мероприятие назначено</span>
+            <p class="hint">Отзыв можно оставить после завершения мероприятия</p>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article class="card-app">
+          <img src="../public/img/coworking.jpg" alt="" width="400" height="250">
+          <div class="card-app-body">
+            <h2>Коворкинг «Точка сборки»</h2>
+            <p>Дата начала: 18.09.2026</p>
+            <p>Оплата: очно</p>
+            <span class="status status-done">Завершено</span>
+            <form class="review-form" novalidate>
+              <select class="form-select">
+                <option>5 из 5</option>
+              </select>
+              <textarea class="form-control" rows="3">Удобные столы и быстрый интернет</textarea>
+              <button class="btn-main" type="button">Оставить отзыв</button>
+            </form>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

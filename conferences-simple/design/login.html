@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Макет 390×844: Вход</title>
+  <link rel="stylesheet" href="../public/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="login.html"><img src="../public/img/logo.jpg" alt="" width="30" height="30">Конференции<span>.РФ</span></a>
+    </div>
+  </header>
+
+  <main class="container page page-narrow">
+    <h1>Вход</h1>
+    <p class="lead">Бронирование залов для всероссийских конференций</p>
+    <p class="message message-error">Неверный логин или пароль</p>
+    <form novalidate>
+      <div class="field">
+        <label for="login">Логин</label>
+        <input class="form-control" id="login" value="ivanova2026">
+      </div>
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input class="form-control" id="password" type="password" value="qwerty12">
+      </div>
+      <button class="btn-main" type="button">Войти</button>
+    </form>
+    <p class="switch"><a href="register.html">Еще не зарегистрированы? Регистрация</a></p>
+  </main>
+</body>
+</html>
